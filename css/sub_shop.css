@@ -178,7 +178,7 @@ body{
     max-width: 1320px;
     margin: 0 auto;
     text-align: center;
-    padding: 150px 0;
+    padding: clamp(50px,20vw,150px) 0;
 }
 
 /*shop*/
@@ -358,6 +358,10 @@ body{
     #header .gnb ul{
         gap: 30px;
     }
+
+    #ment{
+        height: 300px;
+    }
     
     /*footer*/
     #footer{
@@ -454,6 +458,6 @@ body{
     }
     #footer ul{
         padding-top: 20px;
-        gap: 20px;
+        gap: 10px;
     }
 }

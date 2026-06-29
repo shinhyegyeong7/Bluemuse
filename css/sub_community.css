@@ -176,7 +176,7 @@ body{
 /*title*/
 #title{
     text-align: center;
-    padding: 150px 0;
+    padding: clamp(50px,20vw,150px) 0;
 }
 .inner{
     max-width: 1320px;
@@ -187,11 +187,11 @@ body{
 .sub_title{
     max-width: 1320px;
     margin: 0 auto;
-    padding-bottom: 80px;
+    padding-bottom: clamp(40px,4vw,80px);
     padding-left: 20px;
 }
 #notice{
-    padding: 100px 0;
+    padding: clamp(20px,6vw,100px) 0;
 }
 #notice .category{
     display: flex;
@@ -202,7 +202,7 @@ body{
 }
 #notice .category ul{
     display: flex;
-    gap: 100px;
+    gap: 60px;
 }
 #notice .category ul li{
     padding: 20px;
@@ -217,7 +217,7 @@ body{
 }
 #notice .notice_box a ul{
     display: flex;
-    gap: 100px;
+    gap: 60px;
 }
 #notice .notice_box a:hover{
     color: var(--point_color);
@@ -289,7 +289,7 @@ body{
 
 /*event*/
 #event{
-    padding: 100px 0;
+    padding: clamp(20px,6vw,100px) 0;
 }
 #event .event{
     display: grid;
@@ -322,7 +322,7 @@ body{
 
 /*review*/
 #review{
-    padding: 100px 0 200px;
+    padding: clamp(20px,6vw,100px) 0;
 }
 #review .search_wrap{
     padding-bottom: 40px;
@@ -557,6 +557,6 @@ body{
     }
     #footer ul{
         padding-top: 20px;
-        gap: 20px;
+        gap: 10px;
     }
 }

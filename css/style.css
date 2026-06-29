@@ -398,7 +398,7 @@ body{
     color: #fff;
     position: absolute;
     bottom: 200px;
-    right: 40px;
+    right: clamp(20px,2vw,40px);
 }
 
 /*gallery*/
@@ -664,7 +664,7 @@ body{
 
     /*remember*/
     #remember h3{
-        padding-bottom: 15px;
+        padding-bottom: 10px;
         font-size: 20px;
     }
 
@@ -675,6 +675,6 @@ body{
     }
     #footer ul{
         padding-top: 20px;
-        gap: 20px;
+        gap: 10px;
     }
 }
