@@ -1,0 +1,459 @@
+@charset "utf-8";
+
+:root {
+    --main_color: #333;
+    --sub_color: #746D6C;
+    --point_color: #71718A;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, ol{
+    list-style: none;
+}
+img, video, iframe{
+    display: block;
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    font-family: "Nanum Gothic Coding", monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--main_color);
+    background-color: #F2F0ED;
+    overflow-x: hidden;
+}
+
+/*ani_header*/
+#ani_header{
+    font-family: "Cutive Mono", monospace;
+    font-size: 15px;
+    overflow: hidden;
+    background-color: #71718A;
+    color: #fff;
+}
+#ani_header ul{
+    display: flex;
+    gap: 150px;
+}
+.text_ani_slide{
+    display: flex;
+    width: max-content;
+    gap: 150px;
+    animation: marquee 80s linear infinite;
+}
+@keyframes marquee{
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(-50%);
+            }
+        }
+
+/*header*/
+#header{
+    width: 100%;
+   
+    padding: 10px 0;
+    
+    position: absolute;
+    top: 20px;
+    left: 0;
+    z-index: 999;
+}
+#header.on{
+    position: fixed;
+
+    top: 0;
+}
+
+#header .inner{
+    max-width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+#header>.inner> .gnb> ul{
+    font-weight: 600;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#header> .inner> .gnb> ul> li> a{
+    display: block;
+    padding: 6px 0;
+    width: 105px;
+}
+.m_sub_menu{
+    display: none;
+}
+
+/*sub_menu*/
+.sub_bg{
+    position:absolute;
+    left:0;
+    top:100%;
+    width:100%;
+
+    /*background:rgba(237,237,242,.7);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);*/
+
+    height:0;
+    overflow:hidden;
+
+    transition: all 0.4s;
+}
+
+.gnb:hover + .sub_bg, .sub_bg:hover{
+    height:220px;
+}
+.header_bg.slide_down{
+    height: 270px;
+}
+.header_bg{
+    transition: all 0.4s;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+     background: rgba(237, 237, 242, 0.7);
+}
+
+.sub_wrap{
+    max-width:1320px;
+    margin:0 auto;
+    padding:30px 20px;
+}
+
+.sub_menu{
+    display:flex;
+    justify-content:flex-end;
+    gap:45px;
+}
+
+.sub_menu ul{
+    width:105px;
+    text-align:center;
+}
+
+.sub_menu li{
+    margin-bottom:20px;
+}
+
+.sub_menu a:hover{
+    color:#9997BF;
+}
+
+/*hamburger*/
+#header .hamburger{
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+.close{
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+/*title*/
+#title{
+    max-width: 1320px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 150px 0;
+}
+
+/*shop*/
+/*perfume*/
+.en{
+    font-family: "Cutive Mono", monospace;
+    font-size: 18px;
+}
+#perfume{
+    display: flex;
+    justify-content: space-between;
+}
+#perfume .title_box{
+    border: #333 solid 1px;
+    background-color: #B5B5C9;
+    color: #fff;
+    width: 100%;
+}
+.title_text{
+    padding: clamp(50px,5vw,120px);
+}
+.perfume_box{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 100%;
+}
+.item{
+    border: #333 solid 1px;
+    border-left: none;
+}
+.item .text_box{
+    padding: clamp(10px,2vw,40px);
+    border-top: #333 solid 1px;
+    flex-direction: column;
+    position: relative;
+}
+.item .text_box .name{
+    min-height: 60px;
+}
+.heart{
+    position: absolute;
+    right: clamp(10px,2vw,40px);
+    bottom: clamp(10px,2vw,30px);
+    cursor: pointer;
+}
+.heart:hover path{
+    fill: var(--point_color);
+}
+.item .img_box{
+    position: relative;
+    overflow: hidden;
+}
+.item .img_box img{
+    width: 100%;
+}
+.item .img_box .hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+.item .img_box:hover .hover{
+    opacity: 1;
+}
+
+/*solid perfume*/
+#solid_perfume{
+    display: flex;
+    justify-content: space-between;
+}
+#solid_perfume .title_box{
+    border: #333 solid 1px;
+    border-top: none;
+    width: 100%;
+    background-color: #8F8FB1;
+    color: #fff;
+}
+#solid_perfume .item{
+    border-top: none;
+}
+
+/*diffuser oil*/
+#diffuser_oil{
+    display: flex;
+}
+#diffuser_oil .title_box{
+    border: #333 solid 1px;
+    border-top: none;
+    width: 100%;
+    background-color: var(--point_color);
+    color: #fff;
+}
+#diffuser_oil .item{
+    border-top: none;
+}
+#diffuser_oil .perfume_box{
+    width: 100%;
+}
+
+/*ment*/
+#ment{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-image: url(../img/sea.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    width: 100%;
+    height: 600px;
+    color: var(--point_color);
+    letter-spacing: 15px;
+}
+
+/*footer_ani*/
+#footer_ani{
+    border-top: #333 solid 10px;
+    border-bottom: #333 solid 10px;
+    overflow: hidden;
+}
+#footer_ani .text_ani{
+    display: flex;
+    gap: 120px;
+    width: max-content;
+    font-size: 100px;
+    animation: marquee 80s linear infinite;
+    line-height: 0.8;
+}
+
+/*footer*/
+#footer{
+    background-color: #EDEDF2;
+    padding: 60px 40px;
+    width: 100%;
+}
+#footer .inner{
+    max-width: 1320px;
+    margin: 0 auto;
+    color: #746D6C;
+}
+#footer .footer_main{
+    display: flex;
+    gap: 60px;
+    padding-bottom: 40px;
+}
+#footer ul{
+    display: flex;
+    gap: 30px;
+}
+#footer li a:hover{
+    color: #ccc;
+}
+#footer li a{
+    transition: 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*tablet*/
+@media (max-width:1024px){
+
+    /*header*/
+    #header .gnb ul{
+        gap: 30px;
+    }
+    
+    /*footer*/
+    #footer{
+        padding: 60px 40px;
+    }
+}
+
+
+
+
+
+
+
+
+/*mobile*/
+@media (max-width:650px){
+
+    /*header*/
+    .sub_bg{
+        display: none;
+    }
+    .gnb>ul>li>a{
+        font-size: 20px;
+    }
+    #header > .inner > .gnb > ul {
+        text-align: end;
+    }
+    #header .hamburger{
+        display: block;
+    }
+    .gnb{
+        z-index: 999;
+        position: fixed;
+        top:0;
+        right: 0;
+        background-color: #EDEDF2;
+        width: 50%;
+        height: 100vh;
+        padding: 20px;
+
+        transform: translateX(100%);
+        transition: all 0.5s;
+    }
+    .header_bg.slide_down{
+        height: auto;
+    }
+    .header_bg.slide_down{
+        height: 100%;
+    }
+    .gnb.active{
+        transform: translateX(0);
+    }
+    .main_gnb{
+        position: absolute;
+        top: 80px;
+        right: 20px;
+    }
+    .gnb ul{
+        flex-direction: column;
+        text-align: end;
+    }
+    .close{
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+    .m_sub_menu{
+    display: block;
+    }
+    .m_sub_menu li{
+        padding: 5px 0;
+    }
+    .m_sub_menu li a{
+        padding: 10px 0;
+    }
+
+    /*shop*/
+    /*perfume*/
+    .perfume_box{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .item{
+        border-top: none;
+    }
+    .item:nth-child(2){
+        border-top: var(--main_color) solid 1px;
+    }
+
+    /*footer*/
+    #footer .footer_main{
+        display: block;
+        padding-bottom: 20px;
+    }
+    #footer ul{
+        padding-top: 20px;
+        gap: 20px;
+    }
+}
