@@ -266,6 +266,10 @@ body{
     padding: 0 15px;
     outline: none;
     border: var(--main_color) solid 1px;
+    appearance: none;
+    background-image: url(../img/down.svg);
+    background-repeat: no-repeat;
+    background-position: center right 15px;
 }
 /* 아랫줄 */
 #notice .search_bottom{
@@ -332,7 +336,11 @@ body{
 #review .search_wrap select{
     border: var(--main_color) solid 1px;
     outline: none;
-    padding: 5px 10px;
+    padding: 5px 30px 5px 10px;
+    appearance: none;
+    background-image: url(../img/down.svg);
+    background-repeat: no-repeat;
+    background-position: center right 10px;
 }
 .en{
     font-family: "Cutive Mono", monospace;
