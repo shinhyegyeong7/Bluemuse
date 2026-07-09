@@ -188,7 +188,7 @@ body{
     padding-bottom: 80px;
 }
 .preview2{
-    width: clamp(450px,27vw,500px);
+    max-width: clamp(450px,27vw,500px);
     border: var(--main_color) solid 1px;
 }
 .swiper_preview{
@@ -196,7 +196,7 @@ body{
 }
 .preview{
     padding-top: 20px;
-    width: 250px;
+    max-width: 250px;
     height: 100%;
 }
 .preview .swiper-slide{
@@ -221,7 +221,7 @@ body{
 }
 
 
-
+/*buy_box*/
 .buy_box{
     position: sticky;
     top: 100px;
@@ -580,8 +580,7 @@ body{
     }
     .sheet_handle{
         display:flex;
-        justify-content:center;
-        margin-bottom:20px;
+        justify-content: center;
     }
     .sheet_btn{
         border:none;
@@ -692,7 +691,7 @@ body{
     /*pdp*/
     #pdp{
         margin: 0 auto;
-        width: 100%;
+        max-width: 100%;
     }
 
     /*footer*/
@@ -702,6 +701,8 @@ body{
     }
     #footer ul{
         padding-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
 }
