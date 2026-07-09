@@ -234,6 +234,7 @@ body{
 }
 .sheet_handle{
     display: none;
+    margin-bottom: 10px;
 }
 .count_wrap{
     display: flex;
@@ -579,18 +580,18 @@ body{
         transform: translateY(0);
     }
     .sheet_handle{
-        display:flex;
+        display: flex;
         justify-content: center;
     }
     .sheet_btn{
         border:none;
-        background:none;
-        cursor:pointer;
+        background: none;
+        cursor: pointer;
         padding: 10px 200px;
     }
     .sheet_btn img{
         display: block;
-        transition: .3s;
+        transition: 0.3s;
     }
     /* 열렸을 때 화살표 뒤집기 */
     .buy_box.active .sheet_btn img{
@@ -692,6 +693,15 @@ body{
     #pdp{
         margin: 0 auto;
         max-width: 100%;
+    }
+    #pdp .preview2{
+        max-width: 300px;
+    }
+    #pdp .pdp_img{
+        width: 100%;
+    }
+    #pdp .pdp_img img{
+        width: 100%;
     }
 
     /*footer*/
