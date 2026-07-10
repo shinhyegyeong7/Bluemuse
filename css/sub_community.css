@@ -202,7 +202,7 @@ body{
 }
 #notice .category ul{
     display: flex;
-    gap: clamp(20px,11vw,60px);
+    gap: clamp(0px,20vw,60px);
 }
 #notice .category ul li{
     padding: 20px;
@@ -217,15 +217,14 @@ body{
 }
 #notice .notice_box a ul{
     display: flex;
-    gap: clamp(10px,20vw,60px);
+    gap: clamp(0px,20vw,60px);
 }
 #notice .notice_box a:hover{
     color: var(--point_color);
 }
 .notice_box a ul:first-child{
-    width: 40%;
+    width: clamp(30%,1vw,40%);
 }
-
 .notice_box a ul:first-child li{
     white-space: nowrap;
     overflow: hidden;
@@ -249,7 +248,7 @@ body{
 
 /* 검색 */
 #notice .search_wrap{
-    max-width: 450px;
+    max-width: 400px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -258,12 +257,12 @@ body{
 }
 /* 윗줄 */
 #notice .search_top {
+    width: clamp(300px,21vw,400px);
     display: grid;
     gap: 10px;
     grid-template-columns: 1fr 1fr;
 }
 #notice .search_top select{
-    width: clamp(200px,14vw,260px);
     height: 45px;
     padding: 0 15px;
     outline: none;
@@ -275,9 +274,9 @@ body{
 }
 /* 아랫줄 */
 #notice .search_bottom{
-    display: grid;
+        width: clamp(300px,21vw,400px);
+    display: flex;
     gap: 10px;
-    grid-template-columns: 1fr 60px;
 }
 #notice .search_bottom input{
     width: clamp(340px,24vw,460px);

@@ -198,7 +198,8 @@ body{
     width: 100%;
 }
 .title_text{
-    padding: clamp(50px,5vw,120px);
+    padding: clamp(50px,5vw,120px) 0;
+    text-align: center;
 }
 .perfume_box{
     display: grid;
@@ -449,6 +450,11 @@ body{
     }
     .item:nth-child(2){
         border-top: var(--main_color) solid 1px;
+    }
+
+    /*ment*/
+    #ment{
+        letter-spacing: 5px;
     }
 
     /*footer*/
